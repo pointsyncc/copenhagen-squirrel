@@ -50,7 +50,7 @@ export const MobileHeader = () => {
               <path
                 d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
                 stroke="black"
-                stroke-width="2.5"
+                strokeWidth="2.5"
                 stroke-linecap="round"
                 strokeLinejoin="round"
               ></path>
@@ -94,7 +94,7 @@ export const MobileHeader = () => {
                   id="Vector"
                   d="M18 6L6 18M6 6L18 18"
                   stroke="white"
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-linecap="round"
                   strokeLinejoin="round"
                 ></path>

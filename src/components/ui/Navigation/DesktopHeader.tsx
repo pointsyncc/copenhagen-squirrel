@@ -110,7 +110,7 @@ export const DesktopHeader = () => {
                   <path
                     d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
                     stroke={isSticky ? "white" : "white"}
-                    stroke-width="2.5"
+                    strokeWidth="2.5"
                     stroke-linecap="round"
                     strokeLinejoin="round"
                   ></path>
