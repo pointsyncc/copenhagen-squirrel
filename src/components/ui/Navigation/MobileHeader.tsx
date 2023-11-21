@@ -7,7 +7,9 @@ export const MobileHeader = () => {
   return (
     <header
       id="header_mobile"
-      className={`px-2 absolute z-100 top-0 bottom-0 left-0 right-0 py-3 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"}`}
+      className={`px-2 absolute z-100 top-0 bottom-0 left-0 right-0 py-3 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${
+        isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"
+      }`}
     >
       <div className="bg-black/40 py-3 px-4 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px] flex items-center justify-between w-full">
         <img
@@ -37,12 +39,18 @@ export const MobileHeader = () => {
               ></path>
             </svg>
           </a>
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button
+            className="flex  items-center"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             <svg
               width="24"
               height="24"
               fill="none"
               viewBox="0 0 24 24"
+              className={`transition-all duration-700 ease-in-out ${
+                isMenuOpen ? "hidden opacity-0" : "block opacity-100"
+              }`}
               xmlns="http://www.w3.org/2000/svg"
             >
               <g id="ic:round-menu">
@@ -53,63 +61,85 @@ export const MobileHeader = () => {
                 ></path>
               </g>
             </svg>
+            {/* Close icon */}
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              className={`transition-all duration-700 ease-in-out ${
+                isMenuOpen ? "block opacity-100" : "hidden opacity-0"
+              }`}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="ic:round-close">
+                <path
+                  id="Vector"
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
           </button>
         </nav>
       </div>
       {/* Mobile menu */}
-        <div
-          className={`overflow-hidden mx-4 transition-all duration-700 ease-in-out ${
-            isMenuOpen ? "max-h-[1000px]" : "max-h-0"
-          }`}
-        >
-          <ul className="mt-2 flex flex-col gap-4 py-4 w-full">
-            <li>
-              <a
-                href="#"
-                className="text-white text-sm font-medium border-2 border-white rounded-[18px] px-[15px] py-[8px]"
-              >
-                Početna
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
-              >
-                Studio
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
-              >
-                O nama
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
-              >
-                Naš tim
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
-              >
-                Kontakt
-              </a>
-            </li>
+      <div
+        className={`overflow-hidden mx-4 transition-all duration-700 ease-in-out ${
+          isMenuOpen ? "max-h-[1000px]" : "max-h-0"
+        }`}
+      >
+        <ul className="mt-2 flex flex-col gap-4 py-4 w-full">
+          <li>
+            <a
+              href="#"
+              className="text-white text-sm font-medium border-2 border-white rounded-[18px] px-[15px] py-[8px]"
+            >
+              Početna
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
+            >
+              Studio
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
+            >
+              O nama
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
+            >
+              Naš tim
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-white text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap"
+            >
+              Kontakt
+            </a>
+          </li>
           {/* Social Media */}
           <div className="flex items-center gap-2 px-[15px] py-[8px] mt-2">
             <FaInstagram className="text-white text-2xl" />
             <FaFacebook className="text-white text-2xl ml-4" />
           </div>
-          </ul>
-        </div>
+        </ul>
+      </div>
     </header>
   );
 };
