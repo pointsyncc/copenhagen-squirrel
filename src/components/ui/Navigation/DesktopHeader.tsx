@@ -26,12 +26,23 @@ export const DesktopHeader = () => {
           alt="Alfa Film logo"
           className="max-w-[100px] md:max-w-[120px] 2xl:max-w-[160px]"
         />
-        <nav className={`flex items-center gap-3.5 justify-between transition-all duration-500 ease-in-out`}>
-          <ul id="menu_list" className={`bg-[#EFFAFF]/60 border border-transparent backdrop-blur-lg rounded-psc px-3.5 py-2 flex items-center gap-2 justify-between transition-all duration-500 ease-in-out ${isSticky ? 'fixed top-3 left-1/2 translate-x-[-50%] bg-black/50 text-white border border-gray-400/20' : ''}`}>
+        <nav
+          className={`flex items-center gap-3.5 justify-between transition-all duration-500 ease-in-out`}
+        >
+          <ul
+            id="menu_list"
+            className={`bg-[#EFFAFF]/60 border border-transparent backdrop-blur-lg rounded-psc px-3.5 py-2 flex items-center gap-2 justify-between transition-all duration-500 ease-in-out ${
+              isSticky
+                ? "fixed top-3 left-1/2 translate-x-[-50%] bg-black/50 text-white border border-gray-400/20"
+                : ""
+            }`}
+          >
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px] ${isSticky ? 'bg-white/20 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px] ${
+                  isSticky ? "bg-white/20 text-white" : ""
+                }`}
               >
                 Početna
               </a>
@@ -39,7 +50,9 @@ export const DesktopHeader = () => {
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${isSticky ? 'hover:bg-[#9c9990]/40 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${
+                  isSticky ? "hover:bg-[#9c9990]/40 text-white" : ""
+                }`}
               >
                 Studio
               </a>
@@ -47,7 +60,9 @@ export const DesktopHeader = () => {
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${isSticky ? 'hover:bg-[#9c9990]/40 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${
+                  isSticky ? "hover:bg-[#9c9990]/40 text-white" : ""
+                }`}
               >
                 O nama
               </a>
@@ -55,7 +70,9 @@ export const DesktopHeader = () => {
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${isSticky ? 'hover:bg-[#9c9990]/40 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${
+                  isSticky ? "hover:bg-[#9c9990]/40 text-white" : ""
+                }`}
               >
                 Naš tim
               </a>
@@ -63,33 +80,43 @@ export const DesktopHeader = () => {
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${isSticky ? 'hover:bg-[#9c9990]/40 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-transparent transition-colors duration-300 ease-in-out hover:bg-white/30 rounded-[18px] px-[15px] py-[8px] whitespace-nowrap ${
+                  isSticky ? "hover:bg-[#9c9990]/40 text-white" : ""
+                }`}
               >
                 Kontakt
               </a>
             </li>
-            <div className={`h-6 bg-[#767676] w-[3px] rounded-full ${isSticky ? 'bg-white/20' : ''}`}></div>
-            <a
-              href="#"
-              className={`flex items-center gap-3 justify-center text-sm font-medium bg-black rounded-psc px-[15px] py-[8px] ${isSticky ? 'bg-white/20 text-white' : 'text-white '}`}
-            >
-              Rezerviraj{" "}
-              <svg
-                width="11"
-                height="10"
-                viewBox="0 0 14 13"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <li
+              className={`h-6 bg-[#767676] w-[3px] rounded-full ${
+                isSticky ? "bg-white/20" : ""
+              }`}
+            ></li>
+            <li>
+              <a
+                href="#"
+                className={`flex items-center gap-3 justify-center text-sm font-medium bg-black rounded-psc px-[15px] py-[8px] ${
+                  isSticky ? "bg-white/20 text-white" : "text-white "
+                }`}
               >
-                <path
-                  d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
-                  stroke={isSticky ? 'white' : 'white'}
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  strokeLinejoin="round"
-                ></path>
-              </svg>
-            </a>
+                Rezerviraj{" "}
+                <svg
+                  width="11"
+                  height="10"
+                  viewBox="0 0 14 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
+                    stroke={isSticky ? "white" : "white"}
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </svg>
+              </a>
+            </li>
           </ul>
 
           <button className="flex items-center gap-4 px-[20px] py-[8px] transition-colors duration-500 ease-in-out bg-transparent rounded-psc hover:bg-[#36433F]/60 border-2 border-transparent hover:border-[#4C5A56] hover:backdrop-blur-lg">
