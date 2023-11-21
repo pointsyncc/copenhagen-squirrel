@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaInstagram, FaFacebook } from "react-icons/fa6";
 
 export const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,6 +103,11 @@ export const MobileHeader = () => {
                 Kontakt
               </a>
             </li>
+          {/* Social Media */}
+          <div className="flex items-center gap-2 px-[15px] py-[8px] mt-2">
+            <FaInstagram className="text-white text-2xl" />
+            <FaFacebook className="text-white text-2xl ml-4" />
+          </div>
           </ul>
         </div>
     </header>
