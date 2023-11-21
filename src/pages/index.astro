@@ -2,65 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { MobileHeader } from "../components/ui/Navigation/MobileHeader.tsx";
+import HeroSectionBanner from "../components/ui/Banners/HeroSectionBanner.astro";
 ---
 
 <Layout title="Početna">
   <main>
     <!-- Hero Section -->
     <section class="hero_section">
+      <HeroSectionBanner />
       <div
-        class="mx-6 py-2 flex justify-center md:justify-between items-center"
-      >
-        <div class="flex items-center gap-5 justify-center">
-          <a
-            href="mailto:info@alfa-film.hr"
-            class="text-black text-[14px] font-medium flex items-center justify-center gap-2"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="mdi:envelope">
-                <path
-                  id="Vector"
-                  d="M13.3333 5.33341L7.99992 8.66675L2.66659 5.33341V4.00008L7.99992 7.33342L13.3333 4.00008M13.3333 2.66675H2.66659C1.92659 2.66675 1.33325 3.26008 1.33325 4.00008V12.0001C1.33325 12.3537 1.47373 12.6928 1.72378 12.9429C1.97382 13.1929 2.31296 13.3334 2.66659 13.3334H13.3333C13.6869 13.3334 14.026 13.1929 14.2761 12.9429C14.5261 12.6928 14.6666 12.3537 14.6666 12.0001V4.00008C14.6666 3.64646 14.5261 3.30732 14.2761 3.05727C14.026 2.80722 13.6869 2.66675 13.3333 2.66675Z"
-                  fill="#070707"></path>
-              </g>
-            </svg>
-            <span>info@alfa-film.hr</span></a
-          >
-          <a
-            href="mailto:+38598279475"
-            class="text-black text-[14px] font-medium flex items-center justify-center gap-2"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="ic:baseline-phone">
-                <path
-                  id="Vector"
-                  d="M4.41333 7.19333C5.37333 9.08 6.92 10.62 8.80667 11.5867L10.2733 10.12C10.4533 9.94 10.72 9.88 10.9533 9.96C11.7 10.2067 12.5067 10.34 13.3333 10.34C13.7 10.34 14 10.64 14 11.0067V13.3333C14 13.7 13.7 14 13.3333 14C7.07333 14 2 8.92667 2 2.66667C2 2.3 2.3 2 2.66667 2H5C5.36667 2 5.66667 2.3 5.66667 2.66667C5.66667 3.5 5.8 4.3 6.04667 5.04667C6.12 5.28 6.06667 5.54 5.88 5.72667L4.41333 7.19333Z"
-                  fill="black"></path>
-              </g>
-            </svg>
-            <span> +385 98 2794 75</span>
-          </a>
-        </div>
-        <p class="hidden md:flex text-black gap-2 text-[14px] font-medium">
-          Ova web stranica koristi kolačiće.
-          <span class="text-black">Odbij</span>
-          <span class="text-black underline underline-offset-2">Prihvati</span>
-        </p>
-      </div>
-      <div
-        class="relative bg_image min-h-[55rem] max-h-full w-full bg-[url('/hero_section_image.png')] bg-cover bg-center bg-no-repeat rounded-psc"
+        class="relative bg_image h-full w-full bg-[url('/hero_section_image.png')] bg-cover bg-center bg-no-repeat rounded-psc"
       >
         <div class="h-2"></div>
         <MobileHeader client:load />
@@ -259,7 +210,6 @@ import { MobileHeader } from "../components/ui/Navigation/MobileHeader.tsx";
     /*     padding: 1rem; */
     /* width: 800px; */
     max-width: calc(100% - 5rem);
-    max-height: calc(100% - 5rem);
     color: white;
     /*     font-size: 20px; */
     line-height: 1.6;
@@ -272,7 +222,7 @@ import { MobileHeader } from "../components/ui/Navigation/MobileHeader.tsx";
   }
 
   .hero_section {
-    height: 100svh;
+    height: 100dvh;
     width: 100%;
   }
   /* 	.astro-a {
@@ -323,4 +273,3 @@ import { MobileHeader } from "../components/ui/Navigation/MobileHeader.tsx";
 		padding: 0;
 	} */
 </style>
-../components/ui/Navigation/MobileHeader.tsx

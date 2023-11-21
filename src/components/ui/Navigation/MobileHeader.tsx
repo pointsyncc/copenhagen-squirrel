@@ -6,7 +6,7 @@ export const MobileHeader = () => {
   return (
     <header
       id="header_mobile"
-      className="px-5 absolute top-2 left-0 right-0 py-3 mx-2 flex flex-col md:hidden items-start bg-black/50 backdrop-blur-xl border border-[#2D2D2D] rounded-[30px]"
+      className="px-5 absolute z-100 top-2 left-0 right-0 py-3.5 mx-2 flex flex-col md:hidden items-start bg-black/50 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px]"
     >
       <div className="flex items-center justify-between w-full">
         <img
