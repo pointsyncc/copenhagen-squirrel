@@ -33,15 +33,15 @@ export const DesktopHeader = () => {
             id="menu_list"
             className={`bg-[#EFFAFF]/60 border border-transparent backdrop-blur-lg rounded-psc px-3.5 py-2 flex items-center gap-2 justify-between transition-all duration-500 ease-in-out ${
               isSticky
-                ? "fixed top-3 left-1/2 translate-x-[-50%] bg-black/50 text-white border border-gray-400/20"
+                ? "fixed top-3 left-1/2 translate-x-[-50%] bg-black text-white border border-gray-400/20"
                 : ""
             }`}
           >
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px] ${
-                  isSticky ? "bg-white/20 text-white" : ""
+                className={`text-black text-sm font-medium  rounded-[18px] px-[15px] py-[8px] ${
+                  isSticky ? "bg-[#4c4c4c]/60 text-white" : "bg-[#dedede]"
                 }`}
               >
                 Početna
@@ -96,7 +96,7 @@ export const DesktopHeader = () => {
               <a
                 href="#"
                 className={`flex items-center gap-3 justify-center text-sm font-medium bg-black rounded-psc px-[15px] py-[8px] ${
-                  isSticky ? "bg-white/20 text-white" : "text-white "
+                  isSticky ? "bg-white text-black" : "text-white "
                 }`}
               >
                 Rezerviraj{" "}
@@ -109,7 +109,7 @@ export const DesktopHeader = () => {
                 >
                   <path
                     d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
-                    stroke={isSticky ? "white" : "white"}
+                    stroke={isSticky ? "black" : "white"}
                     strokeWidth="2.5"
                     stroke-linecap="round"
                     strokeLinejoin="round"
