@@ -6,13 +6,13 @@ export const MobileHeader = () => {
   return (
     <header
       id="header_mobile"
-      className="px-5 absolute z-100 top-2 left-0 right-0 py-3.5 mx-2 flex flex-col md:hidden items-start bg-black/50 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px]"
+      className={`px-2 absolute z-100 top-0 left-0 right-0 py-3 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"}`}
     >
-      <div className="flex items-center justify-between w-full">
+      <div className="bg-black/40 py-3 px-3.5 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px] flex items-center justify-between w-full">
         <img
           src="/alfa_film_logo.png"
           alt="Alfa Film logo"
-          className="max-w-[100px] md:max-w-[120px] 2xl:max-w-[160px]"
+          className="max-w-[80px] md:max-w-[120px] 2xl:max-w-[160px]"
         />
         <nav className="flex items-center gap-3.5 justify-between">
           <a
@@ -57,11 +57,11 @@ export const MobileHeader = () => {
       </div>
       {/* Mobile menu */}
         <div
-          className={`overflow-hidden transition-all duration-700 ease-in-out ${
+          className={`overflow-hidden mx-4 transition-all duration-700 ease-in-out ${
             isMenuOpen ? "max-h-[1000px]" : "max-h-0"
           }`}
         >
-          <ul className="mt-2 flex flex-col gap-4 py-4 border-[#2D2D2D] border-t-[1px]  w-full">
+          <ul className="mt-2 flex flex-col gap-4 py-4 w-full">
             <li>
               <a
                 href="#"
