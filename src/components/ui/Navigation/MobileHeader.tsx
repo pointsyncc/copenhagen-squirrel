@@ -8,7 +8,7 @@ export const MobileHeader = () => {
       id="header_mobile"
       className={`px-2 absolute z-100 top-0 left-0 right-0 py-3 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"}`}
     >
-      <div className="bg-black/40 py-3 px-3.5 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px] flex items-center justify-between w-full">
+      <div className="bg-black/40 py-3 px-4 backdrop-blur-[24px] border border-[#2D2D2D] rounded-[30px] flex items-center justify-between w-full">
         <img
           src="/alfa_film_logo.png"
           alt="Alfa Film logo"
@@ -17,12 +17,12 @@ export const MobileHeader = () => {
         <nav className="flex items-center gap-3.5 justify-between">
           <a
             href="#"
-            className="text-black flex items-center gap-4 justify-center text-sm font-medium bg-white rounded-psc px-[15px] py-[8px]"
+            className="text-black flex items-center gap-3 justify-center text-xs font-medium bg-white rounded-psc px-[12px] py-[7px]"
           >
             Rezerviraj{" "}
             <svg
-              width="12"
-              height="11"
+              width="11"
+              height="10"
               viewBox="0 0 14 13"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export const MobileHeader = () => {
             <li>
               <a
                 href="#"
-                className="text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px]"
+                className="text-white text-sm font-medium border-2 border-white rounded-[18px] px-[15px] py-[8px]"
               >
                 Početna
               </a>
