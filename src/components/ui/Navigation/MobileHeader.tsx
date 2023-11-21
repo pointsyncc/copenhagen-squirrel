@@ -7,7 +7,7 @@ export const MobileHeader = () => {
   return (
     <header
       id="header_mobile"
-      className={`px-2 absolute z-100 top-0 bottom-0 left-0 right-0 py-2.5 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${
+      className={`px-2 absolute z-100 top-0 bottom-0 left-0 right-0 py-2 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${
         isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"
       }`}
     >
