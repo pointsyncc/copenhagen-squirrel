@@ -31,7 +31,7 @@ export const DesktopHeader = () => {
             <li>
               <a
                 href="#"
-                className={`text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px] ${isSticky ? 'bg-[#9c9990]/40 text-white' : ''}`}
+                className={`text-black text-sm font-medium bg-[#DEDEDE] rounded-[18px] px-[15px] py-[8px] ${isSticky ? 'bg-white/20 text-white' : ''}`}
               >
                 Početna
               </a>
@@ -68,7 +68,7 @@ export const DesktopHeader = () => {
                 Kontakt
               </a>
             </li>
-            <div className="h-6 bg-[#767676] w-[3px] rounded-full"></div>
+            <div className={`h-6 bg-[#767676] w-[3px] rounded-full ${isSticky ? 'bg-white/20' : ''}`}></div>
             <a
               href="#"
               className={`flex items-center gap-3 justify-center text-sm font-medium bg-black rounded-psc px-[15px] py-[8px] ${isSticky ? 'bg-white/20 text-white' : 'text-white '}`}
@@ -86,7 +86,7 @@ export const DesktopHeader = () => {
                   stroke={isSticky ? 'white' : 'white'}
                   stroke-width="2.5"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 ></path>
               </svg>
             </a>
