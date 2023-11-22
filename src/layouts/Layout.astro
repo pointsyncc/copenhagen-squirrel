@@ -1,5 +1,5 @@
 ---
-import { MobileHeader } from '../components/ui/Navigation/MobileHeader';
+import { MobileHeader } from "../components/ui/Navigation/MobileHeader";
 interface Props {
   title: string;
 }
@@ -17,8 +17,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Alfa Film</title>
   </head>
-  <body>
-<!--     <MobileHeader client:load /> -->
+  <body class="w-full m-auto">
+    <MobileHeader client:load />
     <slot />
   </body>
 </html>
@@ -40,13 +40,18 @@ const { title } = Astro.props;
   }
   html {
     font-family: "Roboto", serif;
-   /*  background: #13151a;
+    /*  background: #13151a;
     background-size: 224px; */
   }
-  h1,h2,h3,h4,h5,h6 {
-	font-family: "Roboto Slab", serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto Slab", serif;
   }
-/*   code {
+  /*   code {
     font-family:
       Menlo,
       Monaco,

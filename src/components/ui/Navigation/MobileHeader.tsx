@@ -3,14 +3,17 @@ import { FaInstagram, FaFacebook } from "react-icons/fa6";
 
 export const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [headerTop, setHeaderTop] = useState('top-12');
   const [isSticky, setIsSticky] = useState(false);
 
   /* on scroll make it sticky on scroll stop make it not sticky */
   const checkScrollTop = () => {
     if (!isMenuOpen) {
       if (window.pageYOffset > 50) {
+        setHeaderTop('top-0');
         setIsSticky(true);
       } else {
+        setHeaderTop('top-12');
         setIsSticky(false);
       }
     }
@@ -24,7 +27,7 @@ export const MobileHeader = () => {
   return (
     <header
       id="header_mobile"
-      className={`px-2 ${isSticky ? 'sticky top-0' : 'fixed top-12'} z-100 py-1.5 flex flex-col md:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${
+      className={`px-2 fixed ${headerTop} left-1/2 transform -translate-x-1/2 z-100 py-1.5 flex flex-col xl:hidden items-start border border-transparent rounded-[30px] transition-all duration-700 ease-in-out ${
         isMenuOpen ? "bg-black" : "bg-transparent border-[#2D2D2D]"
       }`}
     >
@@ -51,7 +54,7 @@ export const MobileHeader = () => {
                 d="M2 11.5L12 1.5M12 1.5V11.1M12 1.5H2.4"
                 stroke="black"
                 strokeWidth="2.5"
-                stroke-linecap="round"
+                strokeLinecap="round"
                 strokeLinejoin="round"
               ></path>
             </svg>
@@ -95,7 +98,7 @@ export const MobileHeader = () => {
                   d="M18 6L6 18M6 6L18 18"
                   stroke="white"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                 ></path>
               </g>

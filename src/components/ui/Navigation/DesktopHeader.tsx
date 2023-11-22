@@ -20,7 +20,7 @@ export const DesktopHeader = () => {
 
   return (
     <>
-      <header className="hidden px-5 md:px-10 py-6 md:flex items-center justify-between gap-4">
+      <header className="hidden px-5 md:px-10 py-6 lg:flex items-center justify-between gap-4">
         <img
           src="/alfa_film_logo.png"
           alt="Alfa Film logo"
